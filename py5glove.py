@@ -1,3 +1,11 @@
+'''
+    File name: py5glove.py
+    Author: Jairo Moreno
+    Date created: 20/11/2018
+    Date last modified: 20/11/2018
+    Python Version: 3.6
+'''
+
 from ctypes import *
 
 P5GLOVE_DELTA_BUTTONS=0x01
