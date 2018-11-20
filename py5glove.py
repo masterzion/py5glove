@@ -57,6 +57,7 @@ class Glove:
     def GetPos(self):
         pos  = P5GLOVE_COORD_ARRAY()
         if (self.mask & P5GLOVE_DELTA_POSITION):
+            self.ar_coord=[]
             if self.debug:
                 print("=== POS ===")
             self.lib.p5glove_get_position(self.glove, pos)
@@ -67,6 +68,7 @@ class Glove:
     def GetRotation(self):
         axis = P5GLOVE_COORD_ARRAY()
         if (self.mask & P5GLOVE_DELTA_ROTATION):
+            self.ar_rot=[]
             if self.debug:
                 print("=== ANGLE ===")
             self.lib.p5glove_get_rotation(self.glove, self.angle, axis)
