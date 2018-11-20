@@ -1,6 +1,6 @@
 import py5glove
-import  time
-StepPins =  [1,2,3,4]
+import time
+StepPins = [1,2,3,4]
 obj = py5glove.Glove(-1)
 while True:
     obj.GetSample(-1)
