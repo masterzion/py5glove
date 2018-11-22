@@ -47,7 +47,7 @@ class Glove:
         self.ar_coord=[]
         self.debug = False
 
-    def GetSample(self, debug):
+    def SetDebug(self, debug):
         self.debug = debug
 
     def GetSample(self, Timeout):
