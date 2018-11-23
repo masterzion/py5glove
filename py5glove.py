@@ -40,6 +40,8 @@ class Glove:
         self.lib.p5glove_get_position.argtypes = [c_void_p, P5GLOVE_COORD_ARRAY]
         self.lib.p5glove_get_rotation.argtypes = [c_void_p,  POINTER(c_double), P5GLOVE_COORD_ARRAY]
         self.lib.p5glove_get_buttons.argtypes = [c_void_p,  POINTER(c_uint32)]
+
+
         self.mask=0
         self.ar_rot=[]
         self.angle  = c_double()
@@ -47,7 +49,13 @@ class Glove:
         self.ar_coord=[]
         self.debug = False
 
-    def GetSample(self, debug):
+    def BeginCalibration(self):
+        return self.lib.p5glove_begin_calibration(self.glove)
+
+    def EndCalibration(self):
+        return self.lib.p5glove_end_calibration(self.glove)
+
+    def SetDebug(self, debug):
         self.debug = debug
 
     def GetSample(self, Timeout):

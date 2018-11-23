@@ -10,6 +10,19 @@ import py5glove
 import time
 
 obj = py5glove.Glove(-1)
+print("BeginCalibration")
+obj.BeginCalibration()
+while True:
+    obj.GetSample(-1)
+    time.sleep(0.1)
+    ar = obj.GetButtons()
+    print(ar)
+    if ar[2]:
+        break
+print("EndCalibration")
+obj.EndCalibration()
+time.sleep(3)
+
 while True:
     obj.GetSample(-1)
     print("GetFingers")
