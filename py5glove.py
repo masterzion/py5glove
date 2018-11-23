@@ -49,12 +49,15 @@ class Glove:
         self.ar_coord=[]
         self.debug = False
 
+<<<<<<< HEAD
     def BeginCalibration(self):
         return self.lib.p5glove_begin_calibration(self.glove)
 
     def EndCalibration(self):
         return self.lib.p5glove_end_calibration(self.glove)
 
+=======
+>>>>>>> 8e705c4ff6cce00039fb4424b86629c9bcd806d6
     def SetDebug(self, debug):
         self.debug = debug
 
