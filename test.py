@@ -13,7 +13,7 @@ obj = py5glove.Glove(-1)
 print("BeginCalibration")
 obj.BeginCalibration()
 while True:
-    obj.GetSample(-1)
+    obj.GetSample(100)
     time.sleep(0.1)
     ar = obj.GetButtons()
     print(ar)
@@ -24,7 +24,7 @@ obj.EndCalibration()
 time.sleep(3)
 
 while True:
-    obj.GetSample(-1)
+    obj.GetSample(500)
     print("GetFingers")
     print( obj.GetFingers() )
     print("GetButtons")
@@ -33,4 +33,4 @@ while True:
     print( obj.GetPos() )
     print("GetRotation")
     print( obj.GetRotation() )
-    time.sleep(1)
+    time.sleep(0.5)
